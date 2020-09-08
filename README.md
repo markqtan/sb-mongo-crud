@@ -1,1 +1,2 @@
-https://www.devglan.com/spring-boot/spring-boot-mongodb-crud
+- crud: https://www.devglan.com/spring-boot/spring-boot-mongodb-crud
+- transaction mgmt: https://www.baeldung.com/spring-data-mongodb-transactions

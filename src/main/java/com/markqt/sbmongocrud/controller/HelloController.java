@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,12 +31,13 @@ public class HelloController {
 	}
 
 	@PostMapping("/dept")
+	@Transactional
 	public Department createDept(@RequestBody Department department) {
 		System.out.println(department);
 		departmentRepository.save(department);
 		return department;
 	}
-
+	@Transactional
 	@PutMapping("/dept/{deptId}")
 	public Department updateDept(@RequestBody Department department, @PathVariable String deptId) {
 		department.setId(deptId);
@@ -50,6 +52,7 @@ public class HelloController {
 
 	}
 	
+	@Transactional
 	@DeleteMapping("/dept/{deptId}")
     public String deleteDept(@PathVariable String deptId) {
         departmentRepository.deleteById(deptId);
