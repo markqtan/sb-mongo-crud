@@ -42,6 +42,7 @@ public class HelloController {
 	public Department updateDept(@RequestBody Department department, @PathVariable String deptId) {
 		department.setId(deptId);
 		departmentRepository.save(department);
+//		if(true) throw new RuntimeException("test acid tx");
 		return department;
 	}
 
