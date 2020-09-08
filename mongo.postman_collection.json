@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "21d23dc5-5c0c-41a5-8469-0e31eb6ab498",
+		"name": "mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"content\": \"foo\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/post/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"IT\",\r\n    \"description\": \"IT dept\",\r\n    \"employees\": [\r\n        {\r\n            \"name\": \"Mark\",\r\n            \"age\": 22,\r\n            \"salary\": 120\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dept",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update department",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deptName\": \"IT\",\r\n    \"description\": \"IT department\",\r\n    \"employees\": [\r\n        {\r\n            \"name\": \"Mark\",\r\n            \"age\": 20,\r\n            \"salary\": 101\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dept/5f57be2b7ce4a3098501c97d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"5f57be2b7ce4a3098501c97d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete department",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/dept/5f57be2b7ce4a3098501c97d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"5f57be2b7ce4a3098501c97d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/depts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"depts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get department by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dept/IT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"IT"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get department by emp name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/dept/IT",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"IT"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
